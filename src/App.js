@@ -140,7 +140,7 @@ class App extends React.Component {
 
             <Grid item xs={2} md={4}></Grid>
             <Grid item mt={2} xs={8} md={4}>
-              <TextField fullWidth id="standard-basic" value={this.state.nama} onChange={this.handleNamaChange} label="Nama Lengkap" variant="standard" />
+              <TextField inputProps={{ "data-testid": "nama-lengkap" }} fullWidth id="standard-basic" value={this.state.nama} onChange={this.handleNamaChange} label="Nama Lengkap" variant="standard" />
             </Grid>
             <Grid item xs={2} md={4}></Grid>
 
@@ -245,10 +245,11 @@ class App extends React.Component {
                 <FormLabel id="demo-controlled-radio-buttons-group">Tempat Tanggal Lahir</FormLabel>
                 <Grid container spacing={2}>
                   <Grid item xs={6} md={6} mt={2}>
-                    <TextField fullWidth id="standard-basic" value={this.state.tempatlahir} onChange={this.handleTempatLahirChange} label="Tempat Lahir" variant="standard" />
+                    <TextField inputProps={{ "data-testid": "tempat-lahir" }}  fullWidth id="standard-basic" value={this.state.tempatlahir} onChange={this.handleTempatLahirChange} label="Tempat Lahir" variant="standard" />
                   </Grid>
                   <Grid item xs={6} md={6} mt={2}>
                     <TextField
+                      inputProps={{ "data-testid": "tanggal-lahir" }}
                       fullWidth
                       id="date"
                       label="Tanggal Lahir"
